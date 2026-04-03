@@ -10,7 +10,7 @@
     prompt: What is your NAME?
     private: false  
   tasks:
-  # - name: testing variables preference
+  - name: testing variables preference
   #   vars:
   #     NAME: from task level
   #   ansible.builtin.debug:
