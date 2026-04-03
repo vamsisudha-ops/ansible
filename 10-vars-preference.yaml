@@ -6,7 +6,7 @@
     NAME: from play level
 
   vars_files:
-    - course.yaml
+    # - course.yaml
 
   vars_prompt:
     - name: NAME
