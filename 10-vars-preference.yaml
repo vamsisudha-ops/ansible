@@ -9,7 +9,7 @@
   - name: NAME
     prompt: What is your NAME?
     private: false  
-  # tasks:
+  tasks:
   # - name: testing variables preference
   #   vars:
   #     NAME: from task level
