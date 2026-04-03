@@ -9,9 +9,9 @@
     # - course.yaml
 
   vars_prompt:
-    - name: NAME
-      prompt: What is your NAME?
-      private: false  
+    # - name: NAME
+    #   prompt: What is your NAME?
+    #   private: false  
 
   tasks:
     - name: testing variables preference
