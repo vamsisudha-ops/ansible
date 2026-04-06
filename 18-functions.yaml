@@ -5,6 +5,7 @@
     technologies: DevOps, Linux, Shell, Ansible # string
     name: "Sudhakar A"
     gmail: Info@GMAIL.COM
+    ipaddress: "19222.168.0.1"
     # dictionary == map
     tags:
       Application: payment
@@ -47,3 +48,7 @@
   - name: convert lowercase
     ansible.builtin.debug:
       msg: "{{ gmail | lower }}"
+
+  - name: check IP is valid or not
+    ansible.builtin.debug: 
+      msg: "{{ ipaddress | ansible.utils.ipv4 }}"
