@@ -62,11 +62,19 @@
     ansible.builtin.debug:
       msg: "{{ command_output }}"
 
-  - name: redirect the output
-    ansible.builtin.command: ls -ltr > /tmp/output.txt
+  - name: redirect the output  
+    ansible.builtin.command: ls -ltr > /tmp/output.txt   # remove redirection and check it out once in Linux Server 
     register: redirect_output
     ignore_errors: true
 
-  - name: print redirect_output
+  - name: print redirect_output     
+    ansible.builtin.debug:
+      msg: "{{ redirect_output }}"
+
+  - name: redirect the output using shell        #replacing with shell and executing the script 
+    ansible.builtin.shell: ls -ltr > /tmp/output.txt
+    register: redirect_output
+
+  - name: print redirect_output shell    #replacing with shell and executing the script
     ansible.builtin.debug:
       msg: "{{ redirect_output }}"
