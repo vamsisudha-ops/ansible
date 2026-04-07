@@ -10,6 +10,13 @@
     tags:
       Application: payment
       Environment: dev 
+    # List
+    listTags:
+    - key: Application
+      value: payment
+    - key: Environment
+      value: dev
+      
   tasks:
   - name: default variable
     ansible.builtin.debug:
@@ -26,7 +33,7 @@
 
   - name: convert list into map
     ansible.builtin.debug:
-      msg: "tag map: {{ listtags | items2dict }}"
+      msg: "tag map: {{ listTags | items2dict }}"
 
   - name: read yaml and take it into variable
     ansible.builtin.set_fact:
