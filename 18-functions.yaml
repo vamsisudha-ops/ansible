@@ -70,7 +70,7 @@
       msg: "{{ command_output }}"
 
   - name: redirect the output  
-    ansible.builtin.command: ls -ltr > /tmp/output.txt   # remove redirection and check it out once in Linux Server 
+    ansible.builtin.command: ls -ltr    # remove redirection and check it out once in Linux Server 
     register: redirect_output
     ignore_errors: true
 
